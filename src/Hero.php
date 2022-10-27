@@ -9,11 +9,12 @@ class Hero extends Fighter
 {
     private ?Weapon $weapon = null;
     private ?Shield $shield = null;
+    protected int $experience = 1000;
 
     public function getDamage(): int
     {
         $damage = $this->getStrength();
-        if($this->getWeapon() !== null) {
+        if ($this->getWeapon() !== null) {
             $damage += $this->getWeapon()->getDamage();
         }
         return $damage;
@@ -24,14 +25,14 @@ class Hero extends Fighter
         $defense = $this->getDexterity();
         if ($this->getShield() !== null) {
             $defense += $this->getShield()->getProtection();
-        }    
+        }
 
         return $defense;
     }
 
     /**
      * Get the value of range
-     */ 
+     */
     public function getRange(): float
     {
         $range = $this->range;

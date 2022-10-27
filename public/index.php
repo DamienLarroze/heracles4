@@ -25,7 +25,7 @@ if (!$arena instanceof Arena) {
     $horse2 = new Monster('Mare 2', 25, 12, 'horse.svg');
     $horse3 = new Monster('Mare 3', 25, 12, 'horse.svg');
     $horse4 = new Monster('Mare 4', 25, 12, 'horse.svg');
-    
+
     $arena = new Arena($heracles, [$horse1, $horse2, $horse3, $horse4]);
     $heracles->setX(0);
     $heracles->setY(0);
@@ -34,7 +34,7 @@ if (!$arena instanceof Arena) {
     $horse2->setX(3);
     $horse2->setY(3);
     $horse3->setX(4);
-    $horse3->setY(3); 
+    $horse3->setY(3);
     $horse4->setX(6);
     $horse4->setY(6);
 
@@ -86,7 +86,7 @@ try {
                         <img src="<?= $arena->getHero()->getImage() ?>" alt="heracles">
                         <figcaption><?= $arena->getHero()->getName() ?></figcaption>
                     </figure>
-                    <progress class="life" max="100"  value="<?= $arena->getHero()->getLife() ?>"></progress>
+                    <progress class="life" max="100" value="<?= $arena->getHero()->getLife() ?>"></progress>
                 </div>
             </a>
             <?php foreach ($arena->getMonsters() as $monster) : ?>
